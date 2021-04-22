@@ -6,9 +6,14 @@ public class Composite : Component
 {
     public List<Component> components = new List<Component>();
 
-    public override void Draw(Shape s, Color c)
+    /*public override void Draw(Shape s, Color c)
     {
         Instantiate(GetPrefab());
+    }*/
+
+    public override void Rotate()
+    {
+        throw new System.NotImplementedException();
     }
 
     public override GameObject GetPrefab()
@@ -46,6 +51,4 @@ public class Composite : Component
     {
         
     }
-
-   
 }

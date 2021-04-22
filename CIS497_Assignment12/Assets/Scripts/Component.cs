@@ -12,17 +12,14 @@ public abstract class Component : MonoBehaviour
         Diamond,
     }
     public Shape shape;
-
+    public Color color;
     public GameObject prefab;
 
     public abstract Shape GetShape();
     public abstract GameObject GetPrefab();
-    public abstract void Draw(Shape s, Color c);
+    //public abstract void Draw(Shape s, Color c);
 
-    public virtual void Rotate()
-    {
-
-    }
+    public abstract void Rotate();
 
     public virtual Component GetChild(int i)
     {

@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Leaf : Component
 {
-    public override void Draw(Shape s, Color c)
+    /*public override void Draw(Shape s, Color c)
     {
         Instantiate(GetPrefab());
+    }*/
+
+    public override void Rotate()
+    {
+        throw new System.NotImplementedException();
     }
 
     public override GameObject GetPrefab()

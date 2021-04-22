@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Composite canvas;
+    public Composite left;
+    public Composite right;
     public Component.Shape currentShape;
     public Color currentColor;
 
@@ -45,7 +47,22 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            canvas.Draw(currentShape, currentColor);
+            //canvas.Draw(currentShape, currentColor);
+            Draw(left);
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            //canvas.Draw(currentShape, currentColor);
+            Draw(right);
+        }
+    }
+
+    public void Draw(Composite c)
+    {
+        Leaf l = new Leaf();
+        l.shape = currentShape;
+        l.color = currentColor;
+        Instantiate(l.GetPrefab(), c.transform);
+        c.Add(l);
     }
 }
