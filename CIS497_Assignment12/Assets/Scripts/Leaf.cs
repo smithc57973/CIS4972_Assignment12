@@ -4,30 +4,19 @@ using UnityEngine;
 
 public class Leaf : Component
 {
-     public override void Rotate()
+    public enum Shape
+    {
+        Empty,
+        Square,
+        Circle,
+        Diamond,
+    }
+    public Shape shape;
+    public Color color;
+    public GameObject prefab;
+
+    public override void Rotate()
     {
         gameObject.transform.Rotate(90.0f, 0.0f, 0.0f);
-    }
-
-    public override GameObject GetPrefab()
-    {
-        return prefab;
-    }
-
-    public override Shape GetShape()
-    {
-        return shape;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

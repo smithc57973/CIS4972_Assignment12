@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9158987740695256000}
   - component: {fileID: 6399328481224017027}
+  - component: {fileID: 6077557514697262015}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 7717520858223622968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1112.0684, y: 740.3813, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6077557514697262015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717520858223622968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fa49b72faa079409e103338ae07d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shape: 3
+  color: {r: 0, g: 0, b: 0, a: 0}
+  prefab: {fileID: 7717520858223622968}

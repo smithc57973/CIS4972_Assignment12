@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Composite canvas;
-    public Component.Shape currentShape;
+    public Leaf.Shape currentShape;
     public Color currentColor;
 
     // Start is called before the first frame update
@@ -19,15 +19,15 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            currentShape = Component.Shape.Square;
+            currentShape = Leaf.Shape.Square;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            currentShape = Component.Shape.Circle;
+            currentShape = Leaf.Shape.Circle;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            currentShape = Component.Shape.Diamond;
+            currentShape = Leaf.Shape.Diamond;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
@@ -51,14 +51,5 @@ public class PlayerController : MonoBehaviour
         {
             canvas.components[0].Rotate();
         }
-    }
-
-    public void Draw()
-    {
-        Leaf l = new Leaf();
-        l.shape = currentShape;
-        l.color = currentColor;
-        Instantiate(l.GetPrefab(), canvas.transform);
-        canvas.Add(l);
     }
 }
