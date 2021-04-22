@@ -18,7 +18,6 @@ public abstract class Component : MonoBehaviour
     public abstract Shape GetShape();
     public abstract GameObject GetPrefab();
     //public abstract void Draw(Shape s, Color c);
-
     public abstract void Rotate();
 
     public virtual Component GetChild(int i)

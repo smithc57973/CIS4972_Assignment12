@@ -13,7 +13,25 @@ public class Composite : Component
 
     public override void Rotate()
     {
-        throw new System.NotImplementedException();
+        IterateWithIEnumerator(components);
+    }
+
+    private void IterateWithIEnumerator(IEnumerable<Component> components)
+    {
+        //Get the Enumerator
+        IEnumerator<Component> enumerator = components.GetEnumerator();
+
+        //Enumerator starts at index -1
+        //while there's still a next item, go to the next position
+        while (enumerator.MoveNext())
+        {
+            //get the current componenet the enumerator is pointing to
+            Component component = enumerator.Current;
+
+            //call print on that component
+            component.Rotate();
+        }
+
     }
 
     public override GameObject GetPrefab()

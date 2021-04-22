@@ -9,9 +9,9 @@ public class Leaf : Component
         Instantiate(GetPrefab());
     }*/
 
-    public override void Rotate()
+     public override void Rotate()
     {
-        throw new System.NotImplementedException();
+        gameObject.transform.Rotate(90.0f, 0.0f, 0.0f);
     }
 
     public override GameObject GetPrefab()
