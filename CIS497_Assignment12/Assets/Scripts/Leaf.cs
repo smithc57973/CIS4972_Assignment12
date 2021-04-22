@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Leaf : Component
 {
-    /*public override void Draw(Shape s, Color c)
-    {
-        Instantiate(GetPrefab());
-    }*/
-
      public override void Rotate()
     {
         gameObject.transform.Rotate(90.0f, 0.0f, 0.0f);
